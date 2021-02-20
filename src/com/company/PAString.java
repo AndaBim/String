@@ -56,7 +56,13 @@ public class PAString {
         System.out.println("There are " + endsWithECount + " value(-s) ending with an 'e'.");
         System.out.println("There are " + valuesWithLengthOf5Count + " value(-s) with the length of 5.");
         System.out.println("There are " + valuesCountainingEcount + " value(-s) containing letter 'e'");
+        if(isThereSubStringTe)
+        {
         System.out.println("There are values containing subString 'te'.");
+    } else
+        {
+            System.out.println("Very sad news, no substring 'te' found");
+        }
     }
 
     static void Assignment2() {
@@ -237,12 +243,12 @@ public class PAString {
         }
     }
     public static void main(String[] args) {
-        //Assignment1();
+        Assignment1();
         //Assignment2();
         //Assignment3();
         //Assignment4();
         //Assignment5v1();
-        Assignment5v2();
+        //Assignment5v2();
 
     }
 }
