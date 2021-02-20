@@ -14,7 +14,7 @@ public class PAString {
         int endsWithECount = 0;
         int valuesWithLengthOf5Count = 0;
         int valuesCountainingEcount = 0;
-        boolean isThereSubStringTe = true;
+        boolean isThereSubStringTe = false;
 
         for (int i = 0; i < randomCompilationOfNames.length; i++) {
             //if (randomCompilationOfNames[i].startsWith("C")) //this is one way of getting the result
