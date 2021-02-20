@@ -176,12 +176,73 @@ public class PAString {
 
     }
 
+    static void Assignment5v1() {
+        String sent = "Madam, in Eden, I’m Adam.";
+        sent = sent.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
+        System.out.println(sent);
+
+        boolean isPalindrome = true;
+        int i = 0;
+        int k = sent.length() - 1;
+
+        while (i < k) {
+            if (sent.charAt(i) != sent.charAt(k)) {
+                isPalindrome = false;
+
+                System.out.println("the sentence is not a palindrome");
+                break;
+            } else {
+                i++;
+                k--;
+            }
+
+        }
+        if (isPalindrome) {
+            System.out.println("The sentence is a palindrome");
+        }
+    }
+
+    static boolean checkPalindrome(String sent)
+    {
+        sent = sent.replaceAll("[^a-zA-Z]", "").toLowerCase();
+
+        boolean isPalindrome = true;
+        int i = 0;
+        int k = sent.length() - 1;
+
+        while (i < k) {
+            if (sent.charAt(i) != sent.charAt(k)) {
+                isPalindrome = false;
+
+                break;
+            } else {
+                i++;
+                k--;
+            }
+
+        }
+        return isPalindrome;
+    }
+
+    static void Assignment5v2() {
+        String sentencesToCheck[] = {"Mom", "Was it a car or a cat I saw?", "Java is great!", "Madam, in Eden, I’m Adam.", "Yo, banana boy!"};
+        for (String sent : sentencesToCheck) {
+            System.out.println(sent);
+            if (checkPalindrome(sent)) {
+                System.out.println("This sentence is a palindrome");
+            } else {
+                System.out.println("This sentence is not a palindrome");
+            }
+        }
+    }
     public static void main(String[] args) {
         //Assignment1();
         //Assignment2();
         //Assignment3();
-        Assignment4();
+        //Assignment4();
+        //Assignment5v1();
+        Assignment5v2();
 
     }
 }
